@@ -30,3 +30,13 @@ function addRandomFact() {
   const factContainer = document.getElementById('fact-container');
   factContainer.innerText = fact;
 }
+
+var nightModeEnabled = false;
+function nightModeToggle() {
+    if(!nightModeEnabled){
+        document.getElementById("bootstrap-stylesheet").href="style/bootstrap.min-dark.css"
+    } else {
+        document.getElementById("bootstrap-stylesheet").href="style/bootstrap.min-light.css"
+    }
+    nightModeEnabled = !nightModeEnabled
+};
