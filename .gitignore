@@ -12,3 +12,6 @@ target/
 /.bash_history
 /.bash_logout
 /.bashrc
+/.pre-commit-config.yaml
+/.profile
+/.setup-pre-commit.bash
