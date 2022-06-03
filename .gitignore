@@ -3,3 +3,12 @@
 .project
 .settings/
 target/
+.cache/
+.config/
+.docker/
+.npm/
+.redhat/
+.theia/
+/.bash_history
+/.bash_logout
+/.bashrc
