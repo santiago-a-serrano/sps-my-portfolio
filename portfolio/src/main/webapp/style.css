@@ -13,3 +13,12 @@
 #fact-container {
   margin-top: 20px;
 }
+
+hr.rounded {
+    border-top: 8px solid #bbb;
+    border-radius: 5px;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
