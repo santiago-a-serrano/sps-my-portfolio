@@ -1,0 +1,24 @@
+#content {
+  margin-left: auto;
+  margin-right: auto;
+  width: 650px;
+}
+
+#profile {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+
+#fact-container {
+  margin-top: 20px;
+}
+
+hr.rounded {
+    border-top: 8px solid #bbb;
+    border-radius: 5px;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
