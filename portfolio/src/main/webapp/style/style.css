@@ -9,6 +9,10 @@
       height: 400px;
       object-fit: cover;
   }
+
+  h1, h2 {
+      font-style: italic
+  }
   
   #fact-container {
     margin-top: 20px;
