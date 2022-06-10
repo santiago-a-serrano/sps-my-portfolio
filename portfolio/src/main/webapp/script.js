@@ -31,19 +31,44 @@ function addRandomFact() {
   factContainer.innerText = fact;
 }
 
-var nightModeEnabled = false;
 function nightModeToggle() {
-    if(!nightModeEnabled){
+    const nightModeEnabled = localStorage.getItem("nightModeEnabled")
+    if(nightModeEnabled == "true"){
+        localStorage.setItem("nightModeEnabled", "false")
+    } else {
+        localStorage.setItem("nightModeEnabled", "true")
+    }
+    themeModeLoad()
+};
+
+//Loads the light mode or the night mode, depending on the state of nightModeEnabled
+function themeModeLoad() {
+    const nightModeEnabled = localStorage.getItem("nightModeEnabled");
+    if(nightModeEnabled === null){
+        localStorage.setItem("nightModeEnabled", "false");
+    }
+    if(nightModeEnabled == "true"){
         document.getElementById("bootstrap-stylesheet").href="style/bootstrap.min-dark.css"
     } else {
         document.getElementById("bootstrap-stylesheet").href="style/bootstrap.min-light.css"
     }
-    nightModeEnabled = !nightModeEnabled
-};
+}
+
+//So it loads the day/night mode depending on whatever we have on the nightModeEnabled variable
+document.addEventListener('DOMContentLoaded', themeModeLoad, false);
 
 async function sayHello() {
     const responseFromServer = await fetch('/hello');
     const textFromResponse = await responseFromServer.text();
     const helloContainer = document.getElementById("hello-container");
     helloContainer.innerText = textFromResponse;
+}
+
+async function getOneBand() {
+    const responseFromServer = await fetch('/favourite-bands')
+    const jsonResponse = await responseFromServer.json()
+     // Pick a random band.
+    const band = jsonResponse[Math.floor(Math.random() * jsonResponse.length)];
+    const bandContainer = document.getElementById("band-container")
+    bandContainer.innerText = band
 }
