@@ -40,3 +40,10 @@ function nightModeToggle() {
     }
     nightModeEnabled = !nightModeEnabled
 };
+
+async function sayHello() {
+    const responseFromServer = await fetch('/hello');
+    const textFromResponse = await responseFromServer.text();
+    const helloContainer = document.getElementById("hello-container");
+    helloContainer.innerText = textFromResponse;
+}
