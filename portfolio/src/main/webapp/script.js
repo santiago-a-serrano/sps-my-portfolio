@@ -49,8 +49,10 @@ function themeModeLoad() {
     }
     if(nightModeEnabled == "true"){
         document.getElementById("bootstrap-stylesheet").href="style/bootstrap.min-dark.css"
+        document.getElementById("night-mode-checkbox").checked = true;
     } else {
         document.getElementById("bootstrap-stylesheet").href="style/bootstrap.min-light.css"
+        document.getElementById("night-mode-checkbox").checked = false;
     }
 }
 
