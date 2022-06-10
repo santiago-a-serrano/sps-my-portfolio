@@ -3,17 +3,67 @@
   <head>
     <meta charset="UTF-8">
     <title>Santiago's Portfolio</title>
-    <link rel="stylesheet" href="style.css">
+    <link id="bootstrap-stylesheet" rel="stylesheet" href="style/bootstrap.min-light.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
     <script src="script.js"></script>
   </head>
   <body>
     <div id="content">
-      <h1>Santiago's Portfolio</h1>
+      <h1>Santiago's Portfolio!</h1>
+      <label class="night-mode-switch">
+          <input type="checkbox" onclick="nightModeToggle()">
+          Night mode | 
+      </label>
+      <a href="bands.html">My Favourite Bands</a>
       <img id="profile" src="images/profile.jpg"/>
-      <p>I'm Santiago, a Computer Science student at Tecnológico de Monterrey. Very passionate about everything related to coding, A.I., C.S., and tech in general. Developed Ecoogo (ecoogo.com.co), an awarded app for eco-friendly establishments. I also love math, solving problems, and getting the best out of every team I work with.</p>
+      <p>I'm Santiago, a Computer Science student at Tecnológico de Monterrey. Very passionate about everything related to coding, A.I., C.S., and tech in general. Developed Ecoogo (<a href="ecoogo.com.co">ecoogo.com.co</a>), an awarded app for eco-friendly establishments. I also love math, solving problems, and getting the best out of every team I work with.</p>
       <p>Click here to get a fun fact about me:</p>
-      <button onclick="addRandomFact()">Hello</button>
+      <button onclick="addRandomFact()">Random fact!</button>
       <div id="fact-container"></div>
+      <hr class="dotted">
+      <p>And click here if you want this page to say hello to you:</p>
+      <button onclick="sayHello()">Please say hello to me</button>
+      <div id="hello-container"></div>
+
+      <hr class="rounded">
+
+      <div id="experience">
+        <h2>Experience</h2>
+
+        <hr class="rounded">
+
+        <div id="earlybird">
+            <h4>#EarlyBird at Twitter</h4>
+            <ul>
+              <li>1 of 30 participants selected from a very competitive applicant pool as an 'EarlyBird' to participate in Twitter's week-long #TakeFlight technical challenge.</li>
+              <li>Used JavaScript, JSON, HTML, CSS, and Figma to design, prototype, and develop a Twitter feature with 5 teammates: #TagsForGood.</li>
+              <li>2nd place winner of the Early Bird Tweet Detail New Feature Pitch Competition.</li>
+            </ul>
+            <a href="https://github.com/santiago-a-serrano/-TagsForGood">Click here to go to our project on GitHub!</a>
+        </div>
+
+        <hr class="dotted">
+
+        <div id="director-of-logistics">
+            <h4>Director Of Logistics at SAIIS</h4>
+            <p>Led an awesome team of 4 people that planned and executed the logistics of the Industrial Networking online event, which connected 60 college students with 30 experienced graduate engineers.</p>
+        </div>
+      </div>
+
+      <hr class="rounded">
+
+      <div id="education">
+        <h2>Education</h2>
+
+        <hr class="rounded">
+
+        <div id="tecnologico-de-monterrey">
+            <h4>Tecnológico de Monterrey</h4>
+            <h5>Bachelor of Computer Science and Technology</h5>
+            <p>Academic Scholarship, GPA: 98.28/100</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
