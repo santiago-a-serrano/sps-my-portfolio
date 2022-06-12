@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Contact</title>
+    <link id="bootstrap-stylesheet" rel="stylesheet" href="style/bootstrap.min-light.css">
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <script src="script.js"></script>
+  </head>
+  <body>
+    <div id="content">
+        <h1>Contact me!</h1>
+        <form action="/form-handler" method="POST">
+            <a>Your name:</a>
+            <input type="text" name="name"></input>
+            <br/>
+            <br/>
+            <label for="reason">Reason:</label>
+                <select id="reason" name="reason">
+                    <option value="recruitment">Recruitment</option>
+                    <option value="networking">Networking</option>
+                    <option value="personal">Personal</option>
+                    <option value="other">Other</option>
+                </select>
+            <br/>
+            <br/>
+            <a>Your email:</a>
+            <input type="text" name="email"></input>
+            <br/>
+            <br/>
+            <a>Message:</a>
+            <br/>
+            <textarea name="message">Type your message here</textarea>
+            <br/>
+            <br/>
+            <input type="submit" />
+          </form>
+    </div>
+  </body>
+</html>
