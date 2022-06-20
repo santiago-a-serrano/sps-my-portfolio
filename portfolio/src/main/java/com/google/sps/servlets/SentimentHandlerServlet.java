@@ -48,6 +48,11 @@ public class SentimentHandlerServlet extends HttpServlet {
         response.getWriter().println("<h3>Got the following score:</h3>");
         response.getWriter().println("<p>" + scoreString + "</p>");
 
+        //Button to return home:
+        response.getWriter().println("<form action=\"/\">");
+        response.getWriter().println("<input type=\"submit\" value=\"Go home\" />");
+        response.getWriter().println("</form>");
+
         //End HTML:
         response.getWriter().println("</body>");
         response.getWriter().println("</html>");
