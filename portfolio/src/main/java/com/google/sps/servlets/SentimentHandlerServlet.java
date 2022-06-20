@@ -47,6 +47,9 @@ public class SentimentHandlerServlet extends HttpServlet {
         response.getWriter().println("<p>" + message + "</p>");
         response.getWriter().println("<h3>Got the following score:</h3>");
         response.getWriter().println("<p>" + scoreString + "</p>");
+        response.getWriter().println("<h4>What does it mean?</h4>");
+        response.getWriter().println("<p>A score close to -1 means your message had a clearly negative emotion, while a value close to 1 means it was positive.</p>");
+        response.getWriter().println("<p>If the score is very close to 0, it means the emotion of your message was neutral.</p>");
 
         //Button to return home:
         response.getWriter().println("<form action=\"/\">");
